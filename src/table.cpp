@@ -20,7 +20,7 @@ void opsx::Table::addPlayer(const std::string& fullName,
 void opsx::Table::sortThreshold(std::vector<Player>& result, const uint32_t& threshold) {
     std::copy_if(playerVector.begin(),playerVector.end(),
                  std::back_inserter(result),
-                 [threshold] (Player& pl) { return pl.hasMoreHomeRunsThan(threshold); });
+                 [threshold] (Player& pl) { return pl.hasMoreOrEqualHomeRunsThan(threshold); });
     sort(result, Column::first, Sorting::ascending);
 }
 

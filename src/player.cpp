@@ -70,8 +70,8 @@ double opsx::Player::gameStrikeOuts() {
     return std::any_cast<double>(columnMap[Column::sopg]);
 }
 
-bool opsx::Player::hasMoreHomeRunsThan(const uint32_t &hrs) {
-    return this->homeRuns() > hrs;
+bool opsx::Player::hasMoreOrEqualHomeRunsThan(const uint32_t &hrs) {
+    return this->homeRuns() >= hrs;
 }
 
 // Returns an array representation of this Player's data

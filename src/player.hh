@@ -44,7 +44,7 @@ namespace opsx {
 
         double gameStrikeOuts();
 
-        bool hasMoreHomeRunsThan(const uint32_t& hrs);
+        bool hasMoreOrEqualHomeRunsThan(const uint32_t& hrs);
 
         std::string* serialize(const bool& simple);
 
